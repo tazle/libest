@@ -3200,7 +3200,7 @@ EST_CTX * est_server_init (unsigned char *ca_chain, int ca_chain_len,
      */
     len = (int) strnlen_s((char *)ca_chain, EST_CA_MAX);
     if (len != ca_chain_len) {
-	EST_LOG_ERR("Length of ca_chain doesn't match ca_chain_len");
+	EST_LOG_ERR("Length of ca_chain %d doesn't match ca_chain_len %d", len, ca_chain_len);
         return NULL;
     }
     if (cacerts_resp_chain) {        
